@@ -10,20 +10,18 @@ jdk version - 1.8
 maven version - 3.6.3
 other versions are specified in the pom.xml file
 
-create new project,
+- create new project,
 
-pull src folder from git, and replace the one in the new project
+- pull src folder from git, and replace the one in the new project
 
-add pom xml dependencies
+- add pom xml dependencies
 
-pull the romanian dataset file
+- pull the romanian dataset file
 
-go to class DataStoreOperations and DataStore and comment the lines
+- go to class DataStoreOperations and DataStore and comment the lines
 
 String dataStorePath = ".\\allCountries\\DataStore.txt";
-
 and 
-
 private final static String dataStoreObjectPath = ".\\data_store_resources\\DataStoreObject";
 
 and uncomment the lines
@@ -31,14 +29,13 @@ and uncomment the lines
 and
 //transient private final String dataStorePath = ".\\data_store_resources\\RomaniaDataStore.txt";
 
+- and make sure to have the RomanianDataStore.txt in a folder called data_store_resources
 
-and make sure to have the RomanianDataStore.txt in a folder called data_store_resources
+- the database i used is a postgresql database, make sure to change in application properties file if needed
 
-the database i used is a postgresql database, make sure to change in application properties file if needed
-
-run the application
+- run the application
 wait a little to create/load the datastore
-open localhost:8081/swagger-ui
+- open localhost:8081/swagger-ui
 hf
 
  # Address_Corrector" 
