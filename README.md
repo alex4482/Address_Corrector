@@ -43,4 +43,18 @@ wait a little to create/load the datastore
 - open localhost:8081/swagger-ui
 hf
 
+How it works.
+- the datastore object is created then the spring boot application will start
+- after a request is made, we check in every field for all strings that could represent a country/state name or postal code.
+- normalize every field
+- use regular expressions to look in every field to find names that could match any field
+- make combinations of those words to consider names like "united states of america"
+- find all locations that could be represented by any of those strings
+- now we have actual locations and not nodes
+- try to match nodes with nodes to get a better score to find the best address.
+- 0,1, or more addresses may be returnes
+- the street line field will always be returnes empty
+- postal code = the first 5 digit number found
+- a name for a location = every string containing at least 2 letters
+
  # Address_Corrector" 
