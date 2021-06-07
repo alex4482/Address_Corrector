@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Configuration>
+
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{yyyy-MMM-dd HH:mm:ss} [%t] %-5Level %-50c{1.} - %msg %n" />
+        </Console>
+
+        <File name="File" fileName="Correct_an_Address.log">
+            <PatternLayout pattern="%d [%t] %-5Level %-50c{1.} - %msg %n" />
+        </File>
+    </Appenders>
+
+    <Loggers>
+
+        <logger name="edu.pa.address_corrector.controller.AddressController">
+            <AppenderRef ref="File" />
+            <AppenderRef ref="Console"/>
+        </logger>
+
+        <Logger name="edu.pa.address_corrector.datastore.creator.DataStoreCreator">
+            <AppenderRef ref="File" level="trace"/>
+            <AppenderRef ref="Console" level="info"/>
+        </Logger>
+
+        <logger name="edu.pa.address_corrector.datastore.DataStore">
+            <AppenderRef ref="File" level="trace"/>
+            <AppenderRef ref="Console" level="info"/>
+        </logger>
+
+        <Logger name="edu.pa.address_corrector.datastore.DataStoreOperations">
+            <AppenderRef ref="File" level="trace"/>
+            <AppenderRef ref="Console" level="info"/>
+        </Logger>
+
+        <Logger name="edu.pa.address_corrector.service.AddressService">
+            <AppenderRef ref="File" level="trace"/>
+            <AppenderRef ref="Console" level="info"/>
+        </Logger>
+
+        <Logger name="edu.pa.address_corrector.service.CorrectedAddressService">
+            <AppenderRef ref="File" level="trace"/>
+            <AppenderRef ref="Console" level="info"/>
+        </Logger>
+
+        <Logger name="edu.pa.address_corrector.node.NodeOperations">
+            <AppenderRef ref="File" level="trace"/>
+            <AppenderRef ref="Console" level="info"/>
+        </Logger>
+
+        <Root level="trace">
+            <AppenderRef ref="File" level="trace"/>
+            <AppenderRef ref="Console" level="info"/>
+        </Root>
+    </Loggers>
+
+</Configuration>
