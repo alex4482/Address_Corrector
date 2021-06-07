@@ -21,12 +21,17 @@ other versions are specified in the pom.xml file
 - go to class DataStoreOperations and DataStore and comment the lines
 
 String dataStorePath = ".\\allCountries\\DataStore.txt";
+
 and 
+
 private final static String dataStoreObjectPath = ".\\data_store_resources\\DataStoreObject";
 
 and uncomment the lines
+
 //private final static String dataStoreObjectPath = ".\\data_store_resources\\RomanianDataStoreObject";
+
 and
+
 //transient private final String dataStorePath = ".\\data_store_resources\\RomaniaDataStore.txt";
 
 - and make sure to have the RomanianDataStore.txt in a folder called data_store_resources
