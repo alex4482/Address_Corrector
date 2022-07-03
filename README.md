@@ -41,7 +41,7 @@ and
 - run the application
 wait a little to create/load the datastore
 - open localhost:8081/swagger-ui
-hf
+
 
 How it works.
 - the datastore object is created then the spring boot application will start
